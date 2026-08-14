@@ -1,0 +1,14 @@
+import java.time.LocalDate;
+
+class Solution {
+    public String dayOfTheWeek(int day, int month, int year) {
+        // Create a LocalDate instance
+        LocalDate date = LocalDate.of(year, month, day);
+        
+        // Get day name in uppercase (e.g., "SATURDAY")
+        String dayName = date.getDayOfWeek().toString();
+        
+        // Convert to Title Case (e.g., "Saturday")
+        return dayName.charAt(0) + dayName.substring(1).toLowerCase();
+    }
+}
